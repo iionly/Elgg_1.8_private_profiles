@@ -3,7 +3,7 @@
 	<name>Private Profiles</name>
 	<id>private_profiles</id>
 	<author>iionly</author>
-	<version>1.8.0</version>
+	<version>1.8.1</version>
 	<category>security</category>
 	<description>Profile pages of other users are no longer accessible but only the user's own profile page (admins still can visit all profile pages).</description>
 	<website>https://github.com/iionly</website>
