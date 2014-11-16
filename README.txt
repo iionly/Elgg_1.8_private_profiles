@@ -1,5 +1,5 @@
 Private Profiles for Elgg 1.8
-Latest Version: 1.8.3
+Latest Version: 1.8.4
 Released: 2014-11-16
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
@@ -30,6 +30,10 @@ Installation:
 
 
 Changelog:
+
+1.8.4:
+
+* Fixed: a user's privacy settings for who should be allowed to send messages not saved.
 
 1.8.3:
 
