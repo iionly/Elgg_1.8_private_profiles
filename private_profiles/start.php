@@ -153,7 +153,7 @@ function private_profiles_user_hover_menu($hook, $type, $menu, $params) {
 		
 		if ($default_messages_setting == 'yes') {
 			return $menu;
-		} else if ((($default_messages_setting == 'friends') && (!user_is_friend($user->getGUID(), $logged_in_user))) || ($default_messages_setting == 'no')) {
+		} else if ((($default_messages_setting == 'friends') && ($logged_in_user && !user_is_friend($user->getGUID(), $logged_in_user))) || ($default_messages_setting == 'no')) {
 			foreach ($menu as $key => $item) {
 				switch ($item->getName()) {
 					case 'send':
@@ -175,7 +175,7 @@ function private_profiles_user_hover_menu($hook, $type, $menu, $params) {
 
 		if ($user_messages_setting == 'yes') {
 			return $menu;
-		} else if ((($user_messages_setting == 'friends') && (!user_is_friend($user->getGUID(), $logged_in_user))) || ($user_messages_setting == 'no')) {
+		} else if ((($user_messages_setting == 'friends') && ($logged_in_user && !user_is_friend($user->getGUID(), $logged_in_user))) || ($user_messages_setting == 'no')) {
 			foreach ($menu as $key => $item) {
 				switch ($item->getName()) {
 					case 'send':
@@ -229,7 +229,7 @@ function private_profiles_pm_intercept($hook, $type, $result, $params) {
 			$default_messages_setting = 'friends';
 		}
 		
-		if (($default_messages_setting == 'yes') || (($default_messages_setting == 'friends') && (user_is_friend($user->getGUID(), $logged_in_user)))) {
+		if (($default_messages_setting == 'yes') || (($default_messages_setting == 'friends') && ($logged_in_user && user_is_friend($user->getGUID(), $logged_in_user)))) {
 			return $result;
 		}
 	} else {
@@ -242,7 +242,7 @@ function private_profiles_pm_intercept($hook, $type, $result, $params) {
 			$user_messages_setting = $default_messages_setting;
 		}
 
-		if (($user_messages_setting == 'yes') || (($user_messages_setting == 'friends') && (user_is_friend($user->getGUID(), $logged_in_user)))) {
+		if (($user_messages_setting == 'yes') || (($user_messages_setting == 'friends') && ($logged_in_user && user_is_friend($user->getGUID(), $logged_in_user)))) {
 			return $result;
 		}
 	}
