@@ -1,5 +1,5 @@
 Private Profiles for Elgg 1.8
-Latest Version: 1.8.4
+Latest Version: 1.8.4.1
 Released: 2014-11-16
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
@@ -30,6 +30,10 @@ Installation:
 
 
 Changelog:
+
+1.8.4.1:
+
+* Fixed: privacy setting "Friends" not correctly handled for message option in hover menu and sending of messages.
 
 1.8.4:
 
