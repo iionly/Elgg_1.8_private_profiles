@@ -2,11 +2,11 @@
 <plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
 	<name>Private Profiles</name>
 	<author>iionly</author>
-	<version>1.8.4.1</version>
+	<version>1.8.5</version>
 	<category>security</category>
 	<description>Configure access to profile pages and permission to send private messages (side-wide configuration or optionally configurable by each user separately).</description>
 	<website>https://github.com/iionly</website>
-	<copyright>(C) iionly 2014</copyright>
+	<copyright>(C) iionly 2014-2015</copyright>
 	<license>GNU Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>
